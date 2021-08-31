@@ -25,6 +25,8 @@
     "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": [2, { "caseSensitive": false }],
     "import/resolver": "webpack",
-    "import/extensions": ["error", "always", { "ignorePackages": true }]
+    "import/extensions": ["error", "always", { "ignorePackages": true }],
+    "no-underscore-dangle": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }

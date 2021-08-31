@@ -13,11 +13,16 @@
   "dependencies": {
     "add": "^2.0.6",
     "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "eslint-import-resolver-webpack": "^0.13.1",
+    "js-cookie": "^3.0.0",
+    "jwt-decode": "^3.1.2",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-number-format": "^4.7.3",
+    "react-toastify": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
