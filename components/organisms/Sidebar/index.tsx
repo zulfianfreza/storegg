@@ -1,25 +1,27 @@
 import Footer from './Footer';
 import MenuItem from './MenuItem';
+import Profile from './Profile';
+import Cookies from 'js-cookie';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 interface SideBarProps {
   activeMenu: 'overview' | 'transactions' | 'settings';
 }
 export default function Sidebar(props: SideBarProps) {
   const { activeMenu } = props;
+
+  const router = useRouter();
+
+  const onLogout = () => {
+    Cookies.remove('token');
+    router.push('/');
+  };
+
   return (
     <section className="sidebar">
       <div className="content pt-50 pb-30 ps-30">
-        <div className="user text-center pb-50 pe-30">
-          <img
-            src="/img/avatar-1.png"
-            width="90"
-            height="90"
-            className="img-fluid mb-20"
-            alt="profile"
-          />
-          <h2 className="fw-bold text-xl color-palette-1 m-0">Shayna Anne</h2>
-          <p className="color-palette-2 m-0">shayna@anne.com</p>
-        </div>
+        <Profile />
         <div className="menus">
           <MenuItem
             title="Overview"
@@ -46,7 +48,7 @@ export default function Sidebar(props: SideBarProps) {
             href="/member/edit-profile"
             active={activeMenu === 'settings'}
           />
-          <MenuItem title="Logout" icon="icon-menu-logout" href="/sign-in" />
+          <MenuItem title="Logout" icon="icon-menu-logout" onClick={onLogout} />
         </div>
         <Footer />
       </div>
