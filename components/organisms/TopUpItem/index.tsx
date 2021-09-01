@@ -18,7 +18,8 @@ export default function TopUpItem(props: TopUpItemProps) {
           {data.name}
         </h2>
         <p className="text-lg color-palette-2 mb-0">
-          Category: {data.category.name}
+          Category:
+          {data.category.name}
         </p>
       </div>
     );
@@ -39,7 +40,8 @@ export default function TopUpItem(props: TopUpItemProps) {
           {data.name}
         </h2>
         <p className="text-sm color-palette-2 text-start mb-0">
-          Category: {data.category.name}
+          Category:
+          {data.category.name}
         </p>
       </div>
     </div>
